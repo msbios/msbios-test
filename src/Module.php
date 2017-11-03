@@ -19,6 +19,9 @@ class Module implements ModuleInterface, AutoloaderProviderInterface
     /** @const VERSION */
     const VERSION = '1.0.0';
 
+    /**
+     * @return mixed
+     */
     public function getConfig()
     {
         return include __DIR__ . '/../config/module.config.php';
