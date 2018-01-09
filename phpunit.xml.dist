@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
@@ -8,7 +8,7 @@
          processIsolation="false"
          backupGlobals="false"
          syntaxCheck="true"
->
+         printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
 
     <testsuite name="MSBios Test tests">
         <directory>./tests</directory>
