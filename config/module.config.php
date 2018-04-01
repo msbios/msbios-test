@@ -6,4 +6,5 @@
 namespace MSBios\Test;
 
 return [
+    // ...
 ];

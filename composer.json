@@ -27,11 +27,13 @@
     ]
   },
   "require": {
-    "phpunit/phpunit": "^5.7",
     "zendframework/zend-test": "^3.1",
-    "squizlabs/php_codesniffer": "^3.0",
     "mockery/mockery": "^1.0",
-    "codedungeon/phpunit-result-printer": "^0.5.0"
+    "phpunit/phpunit": "^5.7 || ^6.0",
+    "codedungeon/phpunit-result-printer": "^0.5",
+    "squizlabs/php_codesniffer": "^3.2",
+    "pdepend/pdepend": "^2.5",
+    "phpmd/phpmd": "^2.6"
   },
   "require-dev": {
     "msbios/application": "^1.0",
@@ -44,6 +46,8 @@
       "@cs-check",
       "phpunit --colors=always"
     ],
+    "md-check": "phpmd",
+    "pd-end": "pdepend",
     "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push",
     "cache":[
       "rm -Rf data/cache/*.php",
