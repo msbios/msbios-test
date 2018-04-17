@@ -11,6 +11,7 @@
 
     <testsuite name="MSBios Test tests">
         <directory>./tests</directory>
+        <file>./tests/StackTest.php</file>
     </testsuite>
 
     <filter>
