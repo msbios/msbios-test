@@ -5,6 +5,7 @@
  */
 namespace MSBiosTest\Test;
 
+use MSBios\ModuleInterface;
 use MSBios\Test\Module;
 use PHPUnit\Framework\TestCase;
 
@@ -14,19 +15,34 @@ use PHPUnit\Framework\TestCase;
  */
 class ModuleTest extends TestCase
 {
+
     /**
-     *
+     * @return ModuleInterface|Module
      */
-    public function testGetConfig()
+    public function testModule()
     {
-        $this->assertInternalType('array', (new Module)->getConfig());
+        /** @var ModuleInterface $instance */
+        $instance = new Module;
+        $this->assertInstanceOf(ModuleInterface::class, $instance);
+
+        return $instance;
     }
 
     /**
-     *
+     * @depends testModule
+     * @param ModuleInterface $instance
      */
-    public function testGetAutoloaderConfig()
+    public function testGetConfig(ModuleInterface $instance)
     {
-        $this->assertInternalType('array', (new Module)->getAutoloaderConfig());
+        $this->assertInternalType('array', $instance->getConfig());
+    }
+
+    /**
+     * @depends testModule
+     * @param ModuleInterface $instance
+     */
+    public function testGetAutoloaderConfig(ModuleInterface $instance)
+    {
+        $this->assertInternalType('array', $instance->getAutoloaderConfig());
     }
 }
