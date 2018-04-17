@@ -13,6 +13,7 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 /**
  * Class Module
  * @package MSBios\Test
+ * @link https://phpunit.de/manual/6.5/en/phpunit-book.pdf
  */
 class Module implements ModuleInterface, AutoloaderProviderInterface
 {

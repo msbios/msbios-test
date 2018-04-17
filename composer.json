@@ -3,7 +3,7 @@
   "description": "MSBios Test",
   "license": "MIT",
   "keywords": [
-    "php"
+    "php", "phpunit"
   ],
   "homepage": "https://github.com/msbios/msbios-test",
   "minimum-stability": "stable",
@@ -27,15 +27,16 @@
     ]
   },
   "require": {
-    "zendframework/zend-test": "^3.1",
+    "zendframework/zend-test": "^3.2",
+    "phpunit/php-code-coverage": "^6.0",
     "mockery/mockery": "^1.0",
-    "phpunit/phpunit": "^5.7 || ^6.0",
-    "codedungeon/phpunit-result-printer": "^0.5",
     "squizlabs/php_codesniffer": "^3.2",
     "pdepend/pdepend": "^2.5",
     "phpmd/phpmd": "^2.6"
   },
   "require-dev": {
+    "phpunit/php-invoker": "^2.0",
+    "phpunit/dbunit": "^4.0",
     "msbios/application": "^1.0",
     "msbios/debug": "^1.0"
   },
@@ -46,6 +47,9 @@
       "@cs-check",
       "phpunit --colors=always"
     ],
+    "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+    "upload-coverage": "coveralls -v",
+    "serve": "php -S 0.0.0.0:3107 -t public public/index.php",
     "md-check": "phpmd",
     "pd-end": "pdepend",
     "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push",
@@ -53,8 +57,6 @@
       "rm -Rf data/cache/*.php",
       "rm -Rf data/cache/*.dat",
       "rm -Rf data/logs/*.log"
-    ],
-    "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
-    "upload-coverage": "coveralls -v"
+    ]
   }
 }
