@@ -8,10 +8,14 @@ namespace MSBiosTest\Test;
 use PHPUnit\Framework\TestCase;
 
 /**
- *
+ * Class MultipleDependenciesTest
+ * @package MSBiosTest\Test
  */
 class MultipleDependenciesTest extends TestCase
 {
+    /**
+     * @return string
+     */
     public function testProducerFirst()
     {
         $this->assertTrue(true);
@@ -19,7 +23,7 @@ class MultipleDependenciesTest extends TestCase
     }
 
     /**
-     *
+     * @return string
      */
     public function testProducerSecond()
     {
