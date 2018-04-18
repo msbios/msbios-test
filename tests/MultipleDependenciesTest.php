@@ -18,6 +18,9 @@ class MultipleDependenciesTest extends TestCase
         return 'first';
     }
 
+    /**
+     *
+     */
     public function testProducerSecond()
     {
         $this->assertTrue(true);
