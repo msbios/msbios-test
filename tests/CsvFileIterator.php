@@ -43,7 +43,7 @@ class CsvFileIterator implements \Iterator
      */
     public function valid()
     {
-        return !feof($this->file);
+        return ! feof($this->file);
     }
 
     /**
