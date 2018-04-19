@@ -13,8 +13,10 @@ class CsvFileIterator implements \Iterator
 {
     /** @var resource */
     protected $file;
+
     /** @var int */
     protected $key = 0;
+
     /** @var */
     protected $current;
 
@@ -35,7 +37,6 @@ class CsvFileIterator implements \Iterator
         rewind($this->file);
         $this->current = fgetcsv($this->file);
         $this->key = 0;
-        return $this;
     }
 
     /**
@@ -69,7 +70,6 @@ class CsvFileIterator implements \Iterator
     {
         $this->current = fgetcsv($this->file);
         $this->key++;
-        return $this;
     }
 
     /**

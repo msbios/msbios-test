@@ -35,10 +35,12 @@ class DataTest extends TestCase
     // }
 
     /**
-     * @return array
+     * @return array|CsvFileIterator
      */
     public function additionProvider()
     {
+        return new CsvFileIterator(__DIR__ . '/data.csv');
+
         return [
             'adding zeros' => [0, 0, 0],
             'zero plus one' => [0, 1, 1],
