@@ -13,6 +13,19 @@ use PHPUnit\Framework\TestCase;
  */
 class StackTest extends TestCase
 {
+
+    /** @var  array */
+    protected $stack;
+
+    /**
+     * Constructor
+     * @inheritdoc
+     */
+    protected function setUp()/* The :void return type declaration that should be here would cause a BC issue */
+    {
+        $this->stack = [];
+    }
+
     /**
      * @return array
      */
@@ -21,6 +34,10 @@ class StackTest extends TestCase
         /** @var array $stack */
         $stack = [];
         $this->assertEmpty($stack);
+
+        // ver. 2
+        $this->assertTrue(empty($this->stack));
+
         return $stack;
     }
 
@@ -34,6 +51,12 @@ class StackTest extends TestCase
         array_push($stack, 'foo');
         $this->assertEquals('foo', $stack[count($stack) - 1]);
         $this->assertNotEmpty($stack);
+
+        // ver.2
+        array_push($this->stack, 'foo');
+        $this->assertEquals('foo', $this->stack[count($this->stack) - 1]);
+        $this->assertFalse(empty($this->stack));
+
         return $stack;
     }
 
@@ -45,6 +68,11 @@ class StackTest extends TestCase
     {
         $this->assertEquals('foo', array_pop($stack));
         $this->assertEmpty($stack);
+
+        // ver. 2
+        array_push($this->stack, 'foo');
+        $this->assertEquals('foo', array_pop($this->stack));
+        $this->assertTrue(empty($this->stack));
     }
 
     /**
