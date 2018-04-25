@@ -81,12 +81,13 @@ class TemplateMethodsTest extends TestCase
     }
 
     /**
-     * @param \Exception $e
-     * @throws \Exception
+     * @inheritdoc
+     * @param \Throwable $t
+     * @throws \Throwable
      */
-    protected function onNotSuccessfulTest(\Exception $e)
+    protected function onNotSuccessfulTest(\Throwable $t)
     {
         fwrite(STDOUT, __METHOD__ . "\n");
-        throw $e;
+        throw $t;
     }
 }
