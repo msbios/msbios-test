@@ -20,8 +20,8 @@ class SampleTest extends TestCase
         $this->assertTrue(true, 'This should already work.');
 
         // Stop here and mark this test as incomplete.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        // $this->markTestIncomplete(
+        //     'This test has not been implemented yet.'
+        // );
     }
 }

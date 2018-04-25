@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * Class DatabaseTest
  * @package MSBiosTest\Test
- * @requires extension mysqli
+ * @requires pdo
  */
 class DatabaseTest extends TestCase
 {
@@ -30,22 +30,23 @@ class DatabaseTest extends TestCase
      */
     protected function setUp()/* The :void return type declaration that should be here would cause a BC issue */
     {
-        if (! extension_loaded('mysqli')) {
+        if (! extension_loaded('pdo')) {
             $this->markTestSkipped(
-                'The MySQLi extension is not available.'
+                'The PDO extension is not available.'
             );
         }
     }
 
-    /**
-     * @requires PHP 5.3
-     */
+     /**
+      * -requires PHP 5.3
+      */
     public function testConnection()
     {
+        $this->assertTrue(true);
         // Test requires the mysqli extension and PHP >= 5.3
     }
 
-    // ... All other tests require the mysqli extension
+     // ... All other tests require the mysqli extension
 
     /**
      * @inheritdoc

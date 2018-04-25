@@ -39,7 +39,7 @@ class DataTest extends TestCase
      */
     public function additionProvider()
     {
-        return new CsvFileIterator(__DIR__ . '/data.csv');
+        return new CsvFileIterator(__DIR__ . '/_files/data.csv');
 
         return [
             'adding zeros' => [0, 0, 0],

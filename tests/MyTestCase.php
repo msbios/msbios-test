@@ -14,12 +14,12 @@ use MSBiosTest\Test\Adapter\AbstractSQLiteTestCase;
  */
 class MyTestCase extends AbstractSQLiteTestCase
 {
-
     /**
      * @return \PHPUnit\DbUnit\DataSet\FlatXmlDataSet
      */
     public function getDataSet()
     {
-        return $this->createFlatXmlDataSet(__DIR__ . '/_files/myFlatXmlFixture.xml');
+        // return $this->createFlatXmlDataSet(__DIR__ . '/_files/myFlatXmlFixture.xml');
+        return $this->createXMLDataSet(__DIR__. '/_files/myXMLFixture.xml');
     }
 }

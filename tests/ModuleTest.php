@@ -15,7 +15,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ModuleTest extends TestCase
 {
-
     /**
      * @return ModuleInterface|Module
      */
