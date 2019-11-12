@@ -6,6 +6,7 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\Session',
         'MSBios\Cache',
         'Zend\Cache',
         'Zend\Serializer',
@@ -30,7 +31,6 @@ return [
         'MSBios\Application',
         'MSBios\Assetic',
         'MSBios\Test',
-
 //         'Zend\Log',
 //         'ZendDeveloperTools',
     ],
