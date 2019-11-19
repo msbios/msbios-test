@@ -19,7 +19,7 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 class Module extends \MSBios\Module
 {
     /** @const VERSION */
-    const VERSION = '1.0.9';
+    const VERSION = '1.0.10';
 
     /**
      * @inheritdoc
