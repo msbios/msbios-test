@@ -21,25 +21,23 @@
   "autoload-dev": {
     "psr-4": {
       "MSBiosTest\\Test\\": "tests/"
-    },
-    "files": [
-      "./vendor/zendframework/zend-test/autoload/phpunit-class-aliases.php"
-    ]
+    }
   },
   "require": {
     "php": "^7.1",
-    "zendframework/zend-test": "^3.3",
+    "laminas/laminas-test": "^3.3",
     "phpunit/php-code-coverage": "^7.0",
     "mockery/mockery": "^1.2",
     "squizlabs/php_codesniffer": "^3.5",
     "pdepend/pdepend": "^2.5",
     "phpmd/phpmd": "^2.7",
     "badoo/soft-mocks": "^2.0",
-    "phpunit/php-invoker": "^2.0"
+    "phpunit/php-invoker": "^2.0",
+    "msbios/msbios": "^2.0"
   },
   "require-dev": {
-    "msbios/application": "^1.0",
-    "msbios/debug": "^1.0"
+    "msbios/debug": "^2.0",
+    "laminas/laminas-migration": "^1.0"
   },
   "scripts": {
     "cs-check": "phpcs",
@@ -50,14 +48,7 @@
     ],
     "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
     "upload-coverage": "coveralls -v",
-    "serve": "php -S 0.0.0.0:3107 -t public public/index.php",
     "md-check": "phpmd",
-    "pd-end": "pdepend",
-    "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push",
-    "cache":[
-      "rm -Rf data/cache/*.php",
-      "rm -Rf data/cache/*.dat",
-      "rm -Rf data/logs/*.log"
-    ]
+    "pd-end": "pdepend"
   }
 }

@@ -13,15 +13,14 @@ use PHPUnit\Framework\TestCase;
  */
 class StackTest extends TestCase
 {
-
-    /** @var  array */
+    /** @var array */
     protected $stack;
 
     /**
      * Constructor
      * @inheritdoc
      */
-    protected function setUp()/* The :void return type declaration that should be here would cause a BC issue */
+    protected function setUp(): void
     {
         $this->stack = [];
     }

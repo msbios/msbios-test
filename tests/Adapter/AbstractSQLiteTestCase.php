@@ -18,7 +18,7 @@ abstract class AbstractSQLiteTestCase extends TestCase
     use TestCaseTrait;
 
     // only instantiate pdo once for test clean-up/fixture load
-    static private $pdo = null;
+    private static $pdo = null;
 
     // only instantiate PHPUnit_Extensions_Database_DB_IDatabaseConnection once per test
     private $conn = null;

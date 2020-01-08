@@ -20,7 +20,7 @@ class DatabaseTest extends TestCase
     /**
      * @inheritdoc
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$dbh = new \PDO('sqlite::memory:');
     }
@@ -28,7 +28,7 @@ class DatabaseTest extends TestCase
     /**
      * @inheritdoc
      */
-    protected function setUp()/* The :void return type declaration that should be here would cause a BC issue */
+    protected function setUp(): void
     {
         if (! extension_loaded('pdo')) {
             $this->markTestSkipped(
@@ -51,7 +51,7 @@ class DatabaseTest extends TestCase
     /**
      * @inheritdoc
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
         self::$dbh = null;
     }

@@ -40,6 +40,4 @@ class Module extends \MSBios\Module
     {
         return __NAMESPACE__;
     }
-
-
 }

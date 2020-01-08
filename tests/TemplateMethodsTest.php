@@ -16,7 +16,7 @@ class TemplateMethodsTest extends TestCase
     /**
      * @inheritdoc
      */
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         fwrite(STDOUT, __METHOD__ . "\n");
     }
@@ -24,7 +24,7 @@ class TemplateMethodsTest extends TestCase
     /**
      * @inheritdoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         fwrite(STDOUT, __METHOD__ . "\n");
     }
@@ -32,7 +32,7 @@ class TemplateMethodsTest extends TestCase
     /**
      * @inheritdoc
      */
-    protected function assertPreConditions()
+    protected function assertPreConditions(): void
     {
         fwrite(STDOUT, __METHOD__ . "\n");
     }
@@ -59,7 +59,7 @@ class TemplateMethodsTest extends TestCase
     /**
      * @inheritdoc
      */
-    protected function assertPostConditions()
+    protected function assertPostConditions(): void
     {
         fwrite(STDOUT, __METHOD__ . "\n");
     }
@@ -67,7 +67,7 @@ class TemplateMethodsTest extends TestCase
     /**
      * @inheritdoc
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
         fwrite(STDOUT, __METHOD__ . "\n");
     }
@@ -75,7 +75,7 @@ class TemplateMethodsTest extends TestCase
     /**
      * @inheritdoc
      */
-    public static function tearDownAfterClass()
+    public static function tearDownAfterClass(): void
     {
         fwrite(STDOUT, __METHOD__ . "\n");
     }
@@ -85,7 +85,7 @@ class TemplateMethodsTest extends TestCase
      * @param \Throwable $t
      * @throws \Throwable
      */
-    protected function onNotSuccessfulTest(\Throwable $t)
+    protected function onNotSuccessfulTest(\Throwable $t): void
     {
         fwrite(STDOUT, __METHOD__ . "\n");
         throw $t;
